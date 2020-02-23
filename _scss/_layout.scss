@@ -472,10 +472,12 @@ nav {
             }
         }
         
-        img,
-        svg {
+        img, svg {
             margin: 12px 5px 0 0;
             float: left;
+        }
+        svg {
+            margin: 2px 5px 0 0;
         }
         
         &.button.hollow {
@@ -536,7 +538,7 @@ a.menu-btn {
     }
     
     .index-latest {
-        background: $dark;
+        background: $black;
         color: #afa99e;
         padding: 4em 0;
         
@@ -581,12 +583,11 @@ a.menu-btn {
     }
 }
 
-
 .single-project__link {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
     grid-auto-rows: minmax(460px, auto);
+    gap: 8px;
     margin-bottom: 32px;
 
     .single-project__cta {
@@ -611,6 +612,14 @@ a.menu-btn {
 
     a {
         font-size: 2rem;
+        &:hover {
+            text-decoration: none;
+        }
+        & > svg {
+            vertical-align: middle;
+            margin-top: -2px;
+            margin-left: 4px;
+        }
     }
 
     &.authy {
@@ -622,6 +631,27 @@ a.menu-btn {
         p {
             color: #CBD5E0;
         }
+        a {
+            color: $white;
+            & > svg path {
+                fill: $white;
+            }
+        }
+        .single-project__img-wrap {
+            display: grid;
+            padding: 0 32px;
+            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            .device-1 {
+                background: url("../img/au_1.png") no-repeat bottom left;
+                background-size: contain;
+            }
+            .device-2 {
+                background: url("../img/au_2.png") no-repeat top right;
+                background-size: contain;
+            }
+        }
+        
     }
     &.staash {
         background: #E2E8F0;
@@ -633,10 +663,20 @@ a.menu-btn {
         }
         a {
             color: #2D3748;
+            & > svg path {
+                fill: #2D3748;
+            }
+        }
+        > div:last-child {
+            background: url("../img/st.png") no-repeat bottom right;
+            background-size: contain;
+            display: grid;
+            place-items: end;
         }
     }
     &.kongapay {
-        background: #0090D8;
+        background: #0090D8 url("../img/kp-bg.png") no-repeat;
+        background-size: cover;
         h4 {
             color: $white;
         }
@@ -645,10 +685,28 @@ a.menu-btn {
         }
         a {
             color: $white;
+            & > svg path {
+                fill: $white;
+            }
+        }
+        .single-project__img-wrap {
+            display: grid;
+            padding: 0 32px;
+            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            .device-1 {
+                background: url("../img/kp_1.png") no-repeat bottom left;
+                background-size: contain;
+            }
+            .device-2 {
+                background: url("../img/kp_2.png") no-repeat top right;
+                background-size: contain;
+            }
         }
     }
     &.newthird {
-        background: #FEEBC8;
+        background: #FEEBC8 url("../img/nt-bg.png") right top no-repeat;
+        background-size: contain;
         h4 {
             color: #4C1D0E;
         }
@@ -657,6 +715,15 @@ a.menu-btn {
         }
         a {
             color: #4C1D0E;
+            & > svg path {
+                fill: #4C1D0E;;
+            }
+        }
+        > div:last-child {
+            background: url("../img/nt.png") no-repeat bottom right;
+            background-size: contain;
+            display: grid;
+            place-items: end;
         }
     }
 }

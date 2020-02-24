@@ -1,28 +1,34 @@
 /* Swup animation */
-
 html.is-animating {
-  .transition-fade, .transition-fade-down {
+  .transition-fade,
+  .transition-fade-down {
     opacity: 0;
   }
+
   .transition-fade-down {
     transform: translateY(-20px);
   }
+
   nav li.active a:after {
     width: 0;
   }
+
   .avatar-img {
     opacity: 0;
   }
+
 }
 
 html.is-rendering {
   nav li.active a:after {
     width: 0;
   }
+
   .about-photos_link {
     transform: translateY(10px);
     opacity: 0;
   }
+
 }
 
 .transition-fade {

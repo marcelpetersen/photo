@@ -1,42 +1,70 @@
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark) {
   $dark-mode__white: #e2e8f0;
 
-  body, body.home-body, body.photos-body {
+  body,
+  body.home-body,
+  body.photos-body {
     background: rgba(17, 18, 22, 1);
     color: #93a0c5;
     background-image: linear-gradient(rgba(17, 18, 22, 1.000) 0%, rgba(65, 80, 96, 0.34) 100%);
   }
-  h1, h2, h3, h4, h5, h6,
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .intro-profile h1 {
     color: $dark-mode__white;
   }
+
   p.lead {
     color: #93a0c5;
   }
+
   .date {
     color: #4d5c86;
   }
+
   .muted {
     color: #ed8936;
   }
-  ::-moz-selection { background: rgba(106, 128, 148, 0.9); color: $dark; }
-  ::selection { background:rgba(106, 128, 148, 0.9); color: $dark; }
-  .article-title, .article-title a, a {
+
+  ::-moz-selection {
+    background: rgba(106, 128, 148, 0.9);
+    color: $dark;
+  }
+
+  ::selection {
+    background: rgba(106, 128, 148, 0.9);
+    color: $dark;
+  }
+
+  .article-title,
+  .article-title a,
+  a {
     color: $dark-mode__white;
   }
+
   nav {
     ul {
       margin-bottom: -2px;
     }
+
     a {
       color: $dark-mode__white;
       text-decoration: none;
+
       &:hover {
         color: $white;
       }
+
     }
+
     li.active a {
       color: $dark-mode__white;
+
       &:after {
         content: "";
         position: absolute;
@@ -46,55 +74,67 @@
         bottom: -2px;
         background: $dark-mode__white;
       }
+
     }
+
     .name-text {
       color: $dark-mode__white;
     }
+
     .row:first-child {
       border-color: rgba(118, 126, 165, 0.1);
     }
+
   }
 
   footer {
     color: #93a0c5;
+
     a[href*="//"]:not([href*="ernestojeh.com"])::after {
       border-color: transparent rgba(92, 124, 140, 0.4) transparent transparent;
     }
-    a, a:hover {
+
+    a,
+    a:hover {
       color: #93a0c5;
       text-decoration: none;
     }
+
     .foot-site a {
       color: $dark-mode__white;
+
       &:hover {
         color: $dark-mode__white;
       }
+
     }
+
     li {
       small {
         color: $dark-mode__white;
       }
+
     }
+
     .row:first-child {
       border-color: rgba(245, 245, 245, 0.1);
+
       a:hover {
         color: $dark-mode__white;
       }
+
     }
+
   }
 
   .avatar-img {
-    box-shadow: 8px 8px rgba(26, 69, 86, 0.35),
-                0 4px 8px rgba(17,35,56,.04),
-                0 0 8px rgba(17,35,56,.04),
-                0 18px 27px rgba(17,35,56,.11);
+    box-shadow: 8px 8px rgba(26, 69, 86, 0.35), 0 4px 8px rgba(17, 35, 56, .04), 0 0 8px rgba(17, 35, 56, .04), 0 18px 27px rgba(17, 35, 56, .11);
+
     &:hover {
       transform: translate(-2px, -2px);
-      box-shadow: 12px 15px rgba(26, 69, 86, 0.35),
-                  0px 8px 8px rgba(17,35,56,0.04),
-                  0 0 8px rgba(17,35,56,0.04),
-                  -3px 9px 27px rgba(17,35,56,0.11);
+      box-shadow: 12px 15px rgba(26, 69, 86, 0.35), 0px 8px 8px rgba(17, 35, 56, 0.04), 0 0 8px rgba(17, 35, 56, 0.04), -3px 9px 27px rgba(17, 35, 56, 0.11);
     }
+
   }
 
   .home-box p.lead a {
@@ -109,10 +149,14 @@
     svg path {
       fill: $dark-mode__white;
     }
+
   }
+
   .chat {
     background: #1a202b;
     color: $dark-mode__white;
   }
 
-} // end prefers-color-scheme
+}
+
+// end prefers-color-scheme

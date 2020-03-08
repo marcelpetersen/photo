@@ -380,9 +380,11 @@ abbr, abbr[title] {
 
 }
 
+// Site Navigation
 nav {
     font-family: $font-acumin;
-    position: relative;
+    position: sticky;
+    top: 0;
 
     &.bgnav {
         width: auto;
@@ -561,8 +563,15 @@ a.menu-btn {
                 color: $white;
             }
 
-            .index-photo-desc {
-                font-size: 1.6rem;
+            .photo-index__desc, .photo-index__desc h3 {
+                color: $dark-gray;
+                font-weight: normal;
+                margin-top: -16px;
+                font-size: 32px;
+            }
+
+            .photo-index__desc {
+                margin-bottom: 48px;
             }
 
         }
@@ -999,7 +1008,7 @@ a.menu-btn {
 
     &.casestudy-header {
         position: relative;
-        display: flex;
+        display: block;
         height: auto;
         padding: 0;
         padding-bottom: 0;
@@ -1032,6 +1041,7 @@ a.menu-btn {
 
 }
 
+// Case study page
 .casestudy-body {
     padding-top: 0;
 
@@ -1044,6 +1054,22 @@ a.menu-btn {
         border-color: $white;
     }
 
+    &.kongapay {
+        strong.name-text {
+            color: $white;
+        }
+        .casestudy-header {
+            background: #0090d8 url('../img/kp-bg.png') no-repeat;
+            background-size: cover;
+            color: $white;
+            h1, a {
+                color: $white;
+            }
+            nav li.active {
+                border-color: $white;
+            }
+        }
+    } // close kongapay
 }
 
 .unit.unit-case {
@@ -1241,7 +1267,7 @@ a.single-project {
     }
 
     &.kongapay {
-        background: #1c4dd8 url('../img/kongapay.jpg') no-repeat top;
+        background: #0290d8 url('../img/kongapay.jpg') no-repeat top;
         background-size: cover;
     }
 

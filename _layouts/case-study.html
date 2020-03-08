@@ -1,13 +1,19 @@
 {% include head.html %}
 
-<body class="casestudy-body">
-
-{% include nav.html %}
+<body class="casestudy-body {{ page.nav }}">
   
   <section class="unit unit-case no-padding">
-    <div>
-    {{ content }}
-    </div>
+
+    <div class="animate-wrap"> <!-- closes in footer -->
+
+    <section class="intro casestudy-header">
+         
+        {% include nav.html %}
+
+        <div>
+        {{ content }}
+        </div>
+
   </section>
 
   {% include share-links.html %}

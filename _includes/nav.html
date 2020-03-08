@@ -13,13 +13,13 @@
                 </li>
             </ul>
             <ul class="pull-right links">
-                <li class="{% if page.nav=='home' %}active{% endif %}">
+                <li class="{% if page.nav=='home' or page.layout=='case-study' %}active{% endif %}">
                     <a href="/">Work</a>
                 </li>
                 <li class="{% if page.nav=='about' %}active{% endif %}">
                     <a href="/about/">About</a>
                 </li>
-                <li class="{% if page.nav=='posts' %}active{% endif %}{% if page.layout=='post' %}active{% endif %}">
+                <li class="{% if page.nav=='posts' or page.layout=='post' %}active{% endif %}">
                     <a href="/posts/">Blog</a>
                 </li>
                 <li class="{% if page.nav=='photos' or page.layout=='photo' %}active{% endif %}">

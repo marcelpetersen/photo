@@ -522,7 +522,7 @@ a.menu-btn {
     }
 
     .index-proj {
-        margin-top: -2em;
+        margin-top: -4em;
         padding: 0 0 5em;
         background: $green;
 
@@ -532,6 +532,15 @@ a.menu-btn {
 
         .muted {
             color: #92d4d8;
+        }
+        .feat-projects__title {
+            border-bottom: 1px solid $gray;
+            margin-bottom: 16px;
+
+            h6 {
+                color: $black;
+                margin-bottom: 0;
+            }
         }
 
     }
@@ -1058,6 +1067,22 @@ p.lead {
     border-bottom: 1px solid #979797;
     box-shadow: 16px 16px 0 #ded6c5;
 
+    a {
+        color: $green;
+        border-bottom: 1px solid rgba($green, .3);
+        transition: ease all 0.3s;
+
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            border-color: rgba($green, .8);
+        }
+    }
+
+    .sub-home {
+        font-size: 2.2rem;
+        margin-top: 24px;
+    }
+
     p.lead {
         font-size: 2.4rem;
         padding-top: 24px;
@@ -1065,13 +1090,14 @@ p.lead {
 
         a {
             color: $green;
+            border-bottom: none;
 
             svg {
                 margin-left: 4px;
                 vertical-align: middle;
             }
 
-            &:hover {
+            &:hover, &:focus, &:active {
                 text-decoration: none;
             }
 
@@ -1091,7 +1117,7 @@ p.lead {
 
     h1 {
         font-family: $font-acumin;
-        font-size: 4.6rem;
+        font-size: 4.3rem;
         font-weight: 500;
         line-height: 1.3;
         position: relative;

@@ -3,6 +3,7 @@ title: Posts
 layout: default
 nav: posts
 redirect_from:
+  - /blog
   - /writing
 pagination: 
   enabled: true
@@ -14,11 +15,30 @@ pagination:
 
 <section class="unit page-top">
   <div class="container">
+
     <div class="row">
       <div class="twelve columns">
         <div class="wrap-page">
           <div class="row">
-            <div class="ten columns offset-by-one">
+            <div class="three columns blog-header">
+                <h3>Blog</h3>
+                <!-- Pagination -->
+                <div class="pagination">
+                  {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path }}" class="previous">
+                      &laquo; Newer
+                    </a>
+                  {% else %}
+                    <span class="previous disabled">&laquo; </span>
+                  {% endif %}
+                  {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path }}" class="next">Older &raquo;</a>
+                  {% else %}
+                    <span class="next disabled"> &raquo;</span>
+                  {% endif %}
+                </div>
+            </div>
+            <div class="eight columns offset-by-one">
               <div class="posts-wrap">
 
                 {% for post in paginator.posts  %}
@@ -74,18 +94,18 @@ pagination:
                 <div class="pagination">
                   {% if paginator.previous_page %}
                     <a href="{{ paginator.previous_page_path }}" class="previous">
-                      &laquo; Previous
+                      &laquo; Newer
                     </a>
                   {% else %}
-                    <span class="previous disabled">&laquo; Previous</span>
+                    <span class="previous disabled">&laquo; Newer</span>
                   {% endif %}
                   <span class="page_number">
                     {{ paginator.page }} of {{ paginator.total_pages }}
                   </span>
                   {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path }}" class="next">Next &raquo;</a>
+                    <a href="{{ paginator.next_page_path }}" class="next">Older &raquo;</a>
                   {% else %}
-                    <span class="next disabled">Next &raquo;</span>
+                    <span class="next disabled">Older &raquo;</span>
                   {% endif %}
                 </div>
 

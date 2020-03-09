@@ -111,18 +111,21 @@ html, body {
     }
 
     .post-img_preview {
-        img {
-            transition: ease all 300ms;
+        a {
+            display: block;
+            border: 2px solid $black;
         }
 
-        img:hover {
-            opacity: .8;
+        img {
+            transition: ease all 300ms;
+            display: block;
         }
 
     }
 
     >.muted {
         margin-bottom: .5em;
+        color: $dark-gray;
         border-bottom: 1px solid $light;
     }
 
@@ -130,12 +133,6 @@ html, body {
 
 .post-row {
     padding: 1em 0;
-
-    &:hover .post-img_preview {
-        transition: ease all 300ms;
-        opacity: .6;
-    }
-
 }
 
 a.zoom-image {
@@ -514,6 +511,18 @@ a.menu-btn {
 
 }
 
+.blog-header {
+    h3 {
+        font-weight: 600;
+        padding-bottom: 0;
+        margin-bottom: 0 !important;
+        border-bottom: 2px solid $black;
+    }
+    .pagination a {
+        color: $black;
+    }
+}
+
 .item-unit {
     margin-bottom: 2em;
 }
@@ -550,7 +559,7 @@ a.menu-btn {
     .index-latest {
         padding: 4em 0;
         color: #afa99e;
-        background: $black;
+        background: darken($dark, 8%);
 
         .talks h4 {
             color: $white;
@@ -559,15 +568,50 @@ a.menu-btn {
         &.photo-landing {
             padding: 6em 0;
 
+            .photo-landing__cta-wrap {
+                padding: 4em 0 0;
+            }
+
+            .row.photo-scroller {
+                display: flex;
+
+                .index-photo__grid-1 {
+                    background: url("../img/index-photo__grid-1.jpg") no-repeat left top;
+                    background-size: cover;
+                }
+                .index-photo__grid-2 {
+                    background: url("../img/index-photo__grid-2.jpg") no-repeat left top;
+                    background-size: cover;
+                }
+                .index-photo__grid-3 {
+                    background: url("../img/index-photo__grid-3.jpg") no-repeat left top;
+                    background-size: cover;
+                }
+                .index-photo__grid-4 {
+                    background: url("../img/index-photo__grid-4.jpg") no-repeat left top;
+                    background-size: cover;
+                }
+            }
+
+            .row.photo-scroller > div {
+                height: 420px;
+                background: $gray
+            }
+
             a {
                 color: $white;
+            }
+
+            .white_title {
+                color: $white;
+                font-weight: 600;
+                font-size: 3.1rem;
             }
 
             .photo-index__desc, .photo-index__desc h3 {
                 color: $dark-gray;
                 font-weight: normal;
-                margin-top: -16px;
-                font-size: 32px;
+                font-size: 3.1rem;
             }
 
             .photo-index__desc {
@@ -1015,6 +1059,29 @@ a.menu-btn {
         align-items: center;
         justify-content: center;
 
+        .casestudy-header__controls {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 16px 0;
+            background: rgba(34, 34, 34, 0.41);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-top: 1px solid rgba(21, 50, 66, 0.1);
+            color: $white;
+            a {
+                color: $white !important;
+                font-weight: 500;
+                margin-top: 4px;
+                display: inline-block;
+                &:hover {
+                    text-decoration: none;
+                }
+                svg path {
+                    fill: $white;
+                }
+            }
+        }
+
         .intro-profile {
             margin: 2.6em 0 3em;
         }
@@ -1054,6 +1121,27 @@ a.menu-btn {
         border-color: $white;
     }
 
+    &.authy {
+        strong.name-text {
+            color: #cbd5e0;
+        }
+        .casestudy-header {
+            background: #1a202c;
+            background-size: cover;
+            color: $white;
+            h1, a {
+                color: #cbd5e0;
+            }
+            nav li.active {
+                border-color: #cbd5e0;
+            }
+        }
+        .casestudy-header__controls {
+            background: rgb(43, 53, 80);
+            border-top: 1px solid rgba(83, 150, 187, 0.23);
+        }
+    } // close authy
+
     &.kongapay {
         strong.name-text {
             color: $white;
@@ -1070,6 +1158,67 @@ a.menu-btn {
             }
         }
     } // close kongapay
+
+    &.staash {
+        strong.name-text {
+            color: #2d3748;
+        }
+        .casestudy-header {
+            background: #e2e8f0;
+            background-size: cover;
+            color: #2d3748;
+            h1, a {
+                color: #2d3748;
+            }
+            nav li.active {
+                border-color: #2d3748;
+            }
+            .project-desc {
+                color: #718096;
+            }
+        }
+    } // close staash
+
+    &.newthird {
+        strong.name-text {
+            color: #2d3748;
+        }
+        .casestudy-header {
+            background: #feebc8 url('../img/nt-bg.png') right top no-repeat;
+            background-size: contain;
+            color: #2d3748;
+            h1, a {
+                color: #4c1d0e;
+            }
+            nav li.active {
+                border-color: #4c1d0e;
+            }
+            .project-desc {
+                color: #c05621;
+            }
+        }
+    } // close newthird
+}
+
+.link-arrow__cta {
+    font-size: 2rem;
+    color: $gray;
+
+    & > svg {
+        margin-top: -2px;
+        margin-left: 4px;
+        vertical-align: middle;
+        path {
+            fill: $gray;
+        }
+    }
+
+    &.white {
+        color: $white;
+        & > svg path {
+            fill: $white;
+        }
+    }
 }
 
 .unit.unit-case {
@@ -1583,7 +1732,7 @@ hr {
 
     a {
         text-decoration: none;
-        color: #2d3748;
+        color: $black;
         border-bottom: none;
 
         &:hover {
@@ -1676,6 +1825,15 @@ hr {
     }
 
 }
+
+.post-control {
+    padding: 3em 0;
+    a {
+        color: $black;
+        font-weight: 600;
+    }
+}
+    
 
 .work-preview {
     z-index: 1;
@@ -2206,6 +2364,11 @@ pre>code {
 .contact-form {
     padding-top: 0;
 
+    .contact-title {
+        border-bottom: 2px solid $black;
+        margin-bottom: 0 !important;
+    }
+
     label {
         margin: 0;
         color: $black;
@@ -2379,7 +2542,7 @@ footer {
 
     a, span {
         display: inline-block;
-        padding: 10px 2;
+        padding: 10px 0;
     }
 
     .page_number {

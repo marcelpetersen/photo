@@ -511,6 +511,13 @@ a.menu-btn {
 
 }
 
+.contact-header_photo {
+    background: $gray url("../img/workstation.jpg") center bottom -300px no-repeat;
+    background-size: cover;
+    height: 120px;
+    margin-top: 32px;
+}
+
 .blog-header {
     h3 {
         font-weight: 600;
@@ -912,10 +919,6 @@ a.menu-btn {
     }
 
     .photo-page-single-wrap {
-        .single-photo_wrap {
-            margin-bottom: 1em;
-        }
-
         .sub-photo-title {
             margin-bottom: 2em;
         }
@@ -923,7 +926,6 @@ a.menu-btn {
         .gallery-link {
             position: initial !important;
         }
-
     }
 
     .sub-photo-title {
@@ -1833,6 +1835,16 @@ hr {
         font-weight: 600;
     }
 }
+
+.photos-body .post-control {
+    padding: 0;
+    a {
+        color: $white;
+    }
+    svg path {
+        fill: $white;
+    }
+}
     
 
 .work-preview {
@@ -2337,13 +2349,16 @@ code {
     background: transparent;
 }
 
+code, kbd, pre, samp {
+    font-family: "SF Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace;
+}
+
 pre>code {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 2em;
 }
 
 .highlight {
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .highlighter-rouge {
@@ -2560,7 +2575,7 @@ footer {
 .photo-info {
     display: flex;
     overflow-x: auto;
-    margin-right: -20px;
+    // margin-right: -20px;
     margin-bottom: 2em;
     padding: 0;
     border-bottom: 1px solid rgba(118, 126, 165, .1);
@@ -2635,8 +2650,12 @@ footer {
 
 }
 
+.photo-page-single-wrap .image-wrapper {
+    height: auto;
+}
+
 .image-wrapper {
-    position: relative;    /* You define this doing height / width * 100% */
+    position: relative;
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -2645,8 +2664,7 @@ footer {
     @include aspect-ratio(16, 9);
 
     img {
-
-        /*height: auto;*/
+        height: auto;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -2702,7 +2720,11 @@ footer {
 .link-ext {
     margin-bottom: 16px;
 }
-
+.photo-page-info {
+    a {
+        font-weight: 600;
+    }
+}
 .about-photos_link {
     font-size: 1.6rem;
     position: fixed;
